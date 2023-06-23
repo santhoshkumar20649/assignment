@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "169c5b45-cd22-47b0-b9b2-407c3d484b9d",
+		"name": "postman_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11964152"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "createUser Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE1ZDU4YzVjLTMzY2MtNDI3ZS1iYjZiLWU3MzY4MWE1NzVkMyIsIm5hbWUiOiJzYW50aGZkc2RmIiwicm9sZSI6ImJhc2ljIiwiZW1haWwiOiJzYW50aG9zaEBnbWFpbC5jb20iLCJpYXQiOjE2ODcyNjkzMjQsImV4cCI6MTY4NzI4NzMyNH0.UvaA64K5CHtm2-1fdnuwzAj7ZNz342bseoYytypJN84",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"santhfdsdf\",\r\n    \"email\": \"santhosh@gmail.com\",\r\n    \"password\": \"hellofdsf\",\r\n    \"role\": \"BASIC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/createUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"santhosh@gmail.com\",\r\n    \"password\": \"hellofdsf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzRlZGY3LThkNGYtNDljZC1iZjMyLTA3ZWI2ZmI5MTdlNCIsIm5hbWUiOiJzYW50aG9zaCIsInJvbGUiOiJTVVBFUl9BRE1JTiIsImVtYWlsIjoic2FudGhvc2hAZ21haWwuY29tIiwiaWF0IjoxNjg3MjU0MjE5LCJleHAiOjE2ODcyNzIyMTl9.gRLIDLAhTKYvZ-Oh2iYIhLlaMF36gSURgG3rZEhDVgM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"800dfc0b-97ec-45f0-8d54-ade5217dbd50fsd\",\r\n    \"role\": \"basic\",\r\n    \"email\": \"santhosh@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/deleteUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"deleteUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUsers Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzRlZGY3LThkNGYtNDljZC1iZjMyLTA3ZWI2ZmI5MTdlNCIsIm5hbWUiOiJzYW50aG9zaCIsInJvbGUiOiJTVVBFUl9BRE1JTiIsImVtYWlsIjoic2FudGhvc2hAZ21haWwuY29tIiwiaWF0IjoxNjg3MjY0NzU4LCJleHAiOjE2ODcyODI3NTh9.mBL9iJr-RpLcXWJrRvCrMCwj2yzxn8l7y3_-onqCLBQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/user/getUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"getUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzRlZGY3LThkNGYtNDljZC1iZjMyLTA3ZWI2ZmI5MTdlNCIsIm5hbWUiOiJzYW50aG9zaCIsInJvbGUiOiJTVVBFUl9BRE1JTiIsImVtYWlsIjoic2FudGhvc2hAZ21haWwuY29tIiwiaWF0IjoxNjg3MjY0NzU4LCJleHAiOjE2ODcyODI3NTh9.mBL9iJr-RpLcXWJrRvCrMCwj2yzxn8l7y3_-onqCLBQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"id\": \"5dcf6dff-eb5c-401e-bc3c-6973f78423c3\",\r\n            \"name\": \"santhosh kumar elumalaiv fdgfdsfdsfds\",\r\n            \"role\": \"basic\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/updateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Feeds",
+			"item": [
+				{
+					"name": "CreatedFeed",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE1ZDU4YzVjLTMzY2MtNDI3ZS1iYjZiLWU3MzY4MWE1NzVkMyIsIm5hbWUiOiJzYW50aGZkc2RmIiwicm9sZSI6ImJhc2ljIiwiZW1haWwiOiJzYW50aG9zaEBnbWFpbC5jb20iLCJpYXQiOjE2ODcyNzUzMDMsImV4cCI6MTY4NzI5MzMwM30.8ogp0ECJyTN7D1geLFxGBRNnjIJ0QVL2umC3FvZ-bU8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"testFeed\",\r\n    \"url\": \"testUrl\",\r\n    \"description\": \"test decription\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/feed/createFeed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"feed",
+								"createFeed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateFeedAccess",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE1ZDU4YzVjLTMzY2MtNDI3ZS1iYjZiLWU3MzY4MWE1NzVkMyIsIm5hbWUiOiJzYW50aGZkc2RmIiwicm9sZSI6ImJhc2ljIiwiZW1haWwiOiJzYW50aG9zaEBnbWFpbC5jb20iLCJpYXQiOjE2ODcyNzUzMDMsImV4cCI6MTY4NzI5MzMwM30.8ogp0ECJyTN7D1geLFxGBRNnjIJ0QVL2umC3FvZ-bU8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/feed/updateFeedAccess",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"feed",
+								"updateFeedAccess"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatedFeed",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE1ZDU4YzVjLTMzY2MtNDI3ZS1iYjZiLWU3MzY4MWE1NzVkMyIsIm5hbWUiOiJzYW50aGZkc2RmIiwicm9sZSI6ImJhc2ljIiwiZW1haWwiOiJzYW50aG9zaEBnbWFpbC5jb20iLCJpYXQiOjE2ODcyNzUzMDMsImV4cCI6MTY4NzI5MzMwM30.8ogp0ECJyTN7D1geLFxGBRNnjIJ0QVL2umC3FvZ-bU8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"670d735e-58de-41bf-9c01-037668aa2809\",\r\n    \"name\": \"updated name\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/feed/updateFeed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"feed",
+								"updateFeed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFeeds",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzRlZGY3LThkNGYtNDljZC1iZjMyLTA3ZWI2ZmI5MTdlNCIsIm5hbWUiOiJzYW50aG9zaCIsInJvbGUiOiJTVVBFUl9BRE1JTiIsImVtYWlsIjoic2FudGhvc2hAZ21haWwuY29tIiwiaWF0IjoxNjg3NTMwNjU4LCJleHAiOjE2ODc1NDg2NTh9.NetBshvpMkHIudG0RcgTBoT7I5t1sjJ5VeGfFI1noNY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/feed/getFeeds",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"feed",
+								"getFeeds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteFeed",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logs",
+			"item": [
+				{
+					"name": "getLogs",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzRlZGY3LThkNGYtNDljZC1iZjMyLTA3ZWI2ZmI5MTdlNCIsIm5hbWUiOiJzYW50aG9zaCIsInJvbGUiOiJTVVBFUl9BRE1JTiIsImVtYWlsIjoic2FudGhvc2hAZ21haWwuY29tIiwiaWF0IjoxNjg3NDU2OTkwLCJleHAiOjE2ODc0NzQ5OTB9.4RbYaDTzSRI_YXV0DmByDF-Dm2T2i8V40vaxBZtvuVA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
